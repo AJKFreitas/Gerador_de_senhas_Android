@@ -58,29 +58,43 @@
         android:orientation="vertical"
         android:layout_below="@+id/password"
         android:layout_alignParentStart="true">
-
-        <RadioButton
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Selecione um filtro:"
+            android:id="@+id/filtros"
+            android:layout_alignParentStart="true" />
+        <CheckBox
             android:id="@+id/radioUperCase"
             android:layout_width="match_parent"
             android:layout_height="22dp"
-            android:text="Letras Maiúsculas" />
+            android:text="Letras Maiúsculas"
+            android:checked="true"
+            />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radioLowerCase"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Letras Minúsculas" />
+            android:text="Letras Minúsculas"
+            android:checked="false"
+            />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radioSpecialCharacter"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Simbolos" />
-        <RadioButton
+            android:text="Simbolos"
+            android:checked="false"
+            />
+        <CheckBox
             android:id="@+id/radioNumber"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Numeros" />
+            android:text="Numeros"
+            android:checked="false"
+            />
     </LinearLayout>
 </RelativeLayout>
 

@@ -5,9 +5,26 @@ import java.util.Random;
 public class PasswordGenerator {
     private final Random random = new Random();
     private Boolean includeSymbols = Boolean.FALSE;
-    private Boolean includeNumbers  = Boolean.TRUE;
-    private Boolean includeLowerCase  = Boolean.TRUE;
-    private Boolean includeUpperCase = Boolean.TRUE;
+    private Boolean includeNumbers  = Boolean.FALSE;
+    private Boolean includeLowerCase  = Boolean.FALSE;
+    private Boolean includeUpperCase = Boolean.FALSE;
+
+    public PasswordGenerator(Boolean includeSymbols, Boolean includeNumbers, Boolean includeLowerCase, Boolean includeUpperCase, Integer size) {
+        this.includeSymbols = includeSymbols;
+        this.includeNumbers = includeNumbers;
+        this.includeLowerCase = includeLowerCase;
+        this.includeUpperCase = includeUpperCase;
+        this.size = size;
+    }
+
+    public PasswordGenerator(Boolean includeSymbols, Boolean includeNumbers, Boolean includeLowerCase, Boolean includeUpperCase) {
+        this.includeSymbols = includeSymbols;
+        this.includeNumbers = includeNumbers;
+        this.includeLowerCase = includeLowerCase;
+        this.includeUpperCase = includeUpperCase;
+
+    }
+
     private Integer size = 6;
 
     public PasswordGenerator() {
